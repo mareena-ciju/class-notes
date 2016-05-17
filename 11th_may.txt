@@ -33,19 +33,13 @@ continuation of file system navigation:
                                         
           h) proc directory
              contains a directory for each running process.
-             files co
+             files contain low level info abt cpu, h/w, interrupts etc
            i) usr directory
                it contains all the user binaries, their documentation, libraries, header files, etc....
                j.1)include contains header files
                j.2)src(source): it is not installed when installing linux as it eats up so much memory. con be downloaded when needed.
-               
-               
-               
-               
-              
-              
-              ' kernel.org'ntains low level info abt cpu, h/w, interrupts etc
-             
+           
+                 
            j)root directory
            login directory of a super user
           
