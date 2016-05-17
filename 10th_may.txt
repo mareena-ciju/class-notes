@@ -1,0 +1,50 @@
+
+*)don't use GUI, use commands - learn "vim" editor
+1)what is Kernel?---core of OS; its the kernel that get loaded when we boot a system.
+2)editor commands.........>   uname= get system identification(sys name;OS version, release etc)
+                              lscpu= displays information aboutcpu architecture
+                              lsusb= list usb devices
+                              lsb_release= print distribution-specific information
+                              file=determine file type
+
+
+
+3)navigating the file system
+                                a) /- The Root;entire file system hierarchy is under root;root is the outer layer.
+                                 
+                                  how to differentiate files and folders from appearance and without the appearance?(color; ls -l)
+                                  starting with '-' =file
+                                  "      "      'd' =directory
+
+
+                                   linux do not emphasize on extensions as many other os do.
+
+
+
+                                 b)bin - the files in bin folder holds machine code of command line commands
+
+                                 c)BOOT-the files in BOOt contains kernel
+                                 
+                                 d)dev-contains special or device files-(to access periferal devices)
+                                           c--character special file
+                                           b--block special file.
+                                 
+                                                               
+                                 -rw-r--r-- 1 root root  1238539 Mar 19 03:41 abi-4.4.0-15-generic
+                                 |      |                     |
+                                 |      |              size of file in bits
+                                 |   permissions(read,write,execute)(---owner;---group;---all users)
+                                 |
+                              file/directory?   
+                              
+                              
+                              
+                              
+                              
+                              
+stackoverflow.com
+news.ycombinator.com-paul graham
+                            |->start up idea .
+   hackernews
+lwn.net
+pramode.net
