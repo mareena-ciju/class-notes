@@ -1,0 +1,67 @@
+continuation of file system navigation:
+      e)etc directory
+        mostly has plain text files
+            e.1)password file: each line has ':' seperated fields
+                  root:x:0:0:root
+                     |     | |
+                   |  user group
+                   |   id   id
+                user name
+                root= super user
+
+            e.2)host file
+                file which matches ip adderess to corresponding hosts name
+
+                127.0.0.1
+                 |
+                 |__maps to local host.
+ 
+ 
+            e.3)configuration files
+                text files that influence machine
+          
+          
+          f)home directory
+            also called login directory
+            serves as the repository for a user's personal files, directories and programs
+
+          g)lib directory
+            contains shared object files (.so)...(libraries)
+            object file contains machine codes.
+                                        header file in a pgm contains fn declarations but no function defn. fn defn's are in libraries.
+                                        if libc.so is deleted, entire system crashes(read about dynamic linking)
+                                        
+          h) proc directory
+             contains a directory for each running process.
+             files co
+           i) usr directory
+               it contains all the user binaries, their documentation, libraries, header files, etc....
+               j.1)include contains header files
+               j.2)src(source): it is not installed when installing linux as it eats up so much memory. con be downloaded when needed.
+               
+               
+               
+               
+              
+              
+              ' kernel.org'ntains low level info abt cpu, h/w, interrupts etc
+             
+           j)root directory
+           login directory of a super user
+          
+           k)tmp directory 
+            it holds temporary files.
+            
+           l) usr directory
+               it contains all the user binaries, their documentation, libraries, header files, etc....
+               j.1)include contains header files
+               j.2)src(source): it is not installed when installing linux as it eats up so much memory. con be downloaded when needed.
+               
+               
+               
+               
+              
+              
+              ' kernel.org'
+               
+               
