@@ -1,0 +1,63 @@
+
+1) learned about standard o/p redirection (>)
+    cmd > file_name
+    where cmd= any command that displays an output to the screen.
+
+2) learned the difference between '<' & '<<'
+         '<' is used for standard output redirection, here over writing is done.
+         '<<' is used for appending, it does not over writes
+
+3)learned about grep command
+         grep stands for 'globally search a regular expression and print'
+         grep command is followed by a regular expression(pattern) to match with 
+         
+
+         ^,*,$ etc are called meta characters ie it has special interpretations
+
+         '^pattern$' is a spell checker
+
+
+4) learned about piping
+
+          cmd1 | cmd2
+          3 conditions that must be followed in piping:
+                        1. piping can be done only to commands (cmd1 and cmd2 here)
+                        2. one must be producer of output
+                        3. other must be a consumer 
+
+         piping creates a buffer or array in memory (queue) which helps to achive piping in other words, piping happens in memory.
+         
+         multi stage pipelines are possible 
+         eg: ps ax|grep bioset|wc -l
+        
+redirection and piping are imprtant *****
+
+
+5) learned about process
+          A process is a program in execution.
+          init is the 1st pgm that runs when sys boots.
+          
+
+      learned ulimit command
+      To see the limits associate with your login, use the command ulimit -a.
+      
+
+      other os similar to unix and linux are:
+                                              freebsd------> used to built 'watsapp'
+                                              openbsd
+                                              netbsd
+                                              sun solaris
+                                              ibm----os/2
+                                              hp...webOs etc
+
+7) learned about unix shell
+          shell reads commands and interprets it to produce output.
+          shells allow us to interact with kernel
+
+          difference between echo a* and echo 'a*'
+                echo need not directly process *, as it will already be expanded by the shell
+                but in '*a' quoting suppresses metacharacter expansions
+        
+
+
+
