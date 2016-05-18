@@ -1,0 +1,79 @@
+
+
+CLASS ON UNIX SHELL:
+
+
+*) shell is a command line interpreter and a programming language at the same time.
+
+*) shell is capable of meta character expansion
+   meta characters can used with any commands (it is a privilage) 
+
+*) Quoting is used in shell to supress expansion.
+   why to supress expansion??
+
+*)PATH= colon seperated list of directories
+ path and PATH are different
+      
+      normally present working directory is not included in PATH.(when needed we can add it)
+
+importance of PATH:
+commands are of two types- internal commands(built in commands of a shell) eg: echo cd pwd
+                           external commands. to run these files, we need to run executable files from disk.
+
+whenever the command is external, shell 'looks up' each folders given in the PATH, until it finds an executable file of that name....'look up' follows the same order as it is listed in the path 
+
+almost all commands work with including /bin:/usr/bin:/sbin:/usr/sbin in the PATH
+
+
+to run a shell script named abc, the command is : ./abc
+including '.' explicitly asks shell to look up at the current directory.
+
+to include present directory to path: PATH=$PATH:.
+now if we use abc instead of ./abc
+
+PATH modification is temporary, if we terminate shell, modifications will be wiped out. 
+to make the modification permanent, change the PATH at '.bashrc'(in home directory)
+when a terminal is launched all scripts in this folder(.bashrc) will be executed
+files starting with '.' are hidden files.
+to see hidden files 'ls -a' is used
+
+
+*) white spaces
+a=1 and 
+a = 1 are considered different by shell( reason: its dual behaviour as cmd interpreter and pgm language at same time)
+in 1st case shell interprets the it as assignment operation.
+in second case shell considers it as, command 'a' followed by arguments: '=' and '1' . 
+
+thus we see WHITE SPACES are significant in shell.
+
+*)shell scripts
+  useful to run seq of commands, to easily use lenghthy commands etc (eg of lengthy command: gcc -c -g -wall......)
+cosider the script below(saved as asd):
+echo hello
+date 
+exit
+
+./asd will print hello and date but does not exit terminal.
+why?
+A shell creates a sub shell, when we run a script, the execution is done in sub shell and not in parent shell. thus exit command will exit from sub shell and thus parent shell stays unaffected.
+
+when we 'source' a script, it is executed in the parent shell itself and does not create any sub shell.
+eg: source abc.  we see the terminal being terminated.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+shell is a family of pgms, bash is one among them
+tmux: creates multiple tabs in single terminal. useful especially when using remote machines.
+
+
+
+edx.org (learn the art of writing). ******
+
+
+
+
+
+
+
+
