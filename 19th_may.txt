@@ -1,0 +1,43 @@
+
+
+
+*) Two powerful tools in Linux are: shell and Vim (or emacs). 
+
+BASH PROGRAMMING:
+
+1) WHILE LOOP:
+	a)In a bash while loop, the condition part is always interpretted as a program. 
+ 
+  Normally in a pgm, a return fn will return value to main fn.
+  When a return fn is called in main fn, it return value to bash. Such return values are known as exit status.
+
+	eg: 	main()
+		{
+		return 10;
+		}
+    
+	here the value 10 is known as exit status.
+
+	b)Successfully executed commands have exit status 0
+          Failure is indicated by exit status 1.
+		(reason for following 0 as success and 1 as f is that
+                 unlike sucess,  reason for failure must be indicated.... 
+                 so numbers 1,2,3....etc(int values) can be used for this purpose and 0 can simply be considered success)
+consider,	
+	while ls
+	do
+  	echo hi
+	done
+
+if ls is executed successfully exit status is 0. depending on exit status, the loop executes.
+o/p of ls will be displayed among 'hi'.
+
+
+
+
+	c) Redirection to null can be used to avoid the o/p of the condition part. null acts as a data sink which discards all kinds of data.
+			eg: ls>dev/null
+
+
+
+
