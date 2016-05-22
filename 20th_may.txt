@@ -1,0 +1,25 @@
+
+
+*)ping command: to see whether n\w is reachable
+*)ifconfig ---> connctivity info.
+
+    eg: if(ifconfig|grep wlx)
+	then
+		echo wifi available
+	else
+		echo no wifi
+	fi
+
+
+*) Focus of shell is not computation. it isnot a general purpose pgm.
+   It is used manipulate pgm's,files etc
+
+*) a=date----------->prints 'date'.
+
+   a=`date`       (``) are called back quotes..
+ here actual date is printed
+
+
+*)expr------>prints to screen but does not assign.
+
+
