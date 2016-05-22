@@ -19,7 +19,12 @@
    a=`date`       (``) are called back quotes..
  here actual date is printed
 
+*)doing arithmatic: 
+eg expr 1'+'2
 
-*)expr------>prints to screen but does not assign.
+expr------>prints to screen but does not assign.
+
+*)testing conditions
+eg: test -1 -lt 1
 
 
