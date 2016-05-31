@@ -1,0 +1,24 @@
+Sometimes c is mixed with python to increase  performance
+
+-du (disk usage) estimate file space usage
+
+
+-compilation:
+	-gcc (GNU c compiler)/(GNU Compiler Collection)
+	-why is c compiler one of the most imp tool in any OS?
+           ans: taking a system, almost everything in it is written in c.
+                eg: kernal, editors,commands,languages like python, most compilers & interpretors,etc....   is written in c
+                c advantages: efficient,fast,low level interactions with h/w etc
+
+                mozilla rust... planned as a c replacement 
+	
+	cc -v ....version of gcc
+	
+stages of C ompilation:
+1.preprocessing---->macro expansion
+2.Comile proper---->assembly code generated
+3.Assembly--------->object file created
+4Linking----------->executable code generated
+
+stage 2 is most complex phasee in compilation.
+GCC: optimizing compiler;re-targetable compiler
