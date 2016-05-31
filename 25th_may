@@ -1,0 +1,34 @@
+
+PYTHON: 
+- developed by guido von rossum
+-2 independent versions: python 2.x
+                        python 3.x
+ these are incompatible versions
+
+-python is a dynamically typed high level language
+       eg of statically typed languages: c, c++,java etc
+
+-python is a general purpose language but cannot be used as very low level language, or , when high performance is needed.
+
+- python is comparitively a slow language
+
+-python has REPL ---->Read, Eval, Print, Loop   (every languages do not have repl)
+
+-Python has intentation based looping.
+
+-Execution of python program:
+a)compilation to byte code---->checks for syntactical errors; byte code generation.
+b)byte code interpretation
+
+-Python is platform independent.
+  
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------
+edx.org
+mooc-----massive open online course
