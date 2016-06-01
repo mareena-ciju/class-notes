@@ -1,0 +1,44 @@
+- len(a)-returns length of a.
+-a[::-1]-returns a new reversed list. (even if lists are mutable, here we have a new list created)
+
+
+
+-a.sort()--------------> mutated list
+-print sorted(a)-------> returns a new sorted list without changing 'a'
+	
+
+List Comprehension eg : [x*x for x in a]
+	complex comprehension, nested comprehension
+python programming approach:
+in case of repetition follow
+	1.list comprehension, if not possible...
+	2.for, if not possible with for....
+	3.while 
+
+-unpacking:
+	a,b = (1,2)
+	a--->1
+	b--->2
+
+zip function
+
+dictionary: associative array : map : mesh
+- keys usually does not have any ordering( ordering keys are also available)
+
+
+
+-none---->null
+
+key diff between list and tuples: lists are mutable, tuples are immutables; 
+
+-keys in dictionaryy are immutable.
+-key error :when the key given is not there in the data structre'
+
+-set default(,)
+-print a.has_key('x')
+
+
+dictionary comprehension:
+
+
+
