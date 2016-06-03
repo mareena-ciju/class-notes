@@ -1,0 +1,46 @@
+
+-compilers are language translator while interpreters are language evaluators
+-String- indexing/negative indexing. exception:index error(out of bound)
+         str1 + str2  (new string)
+         str1 * str2  (new string)
+         slicing [i1:i2]
+         str1[::-1]->new reversed string 
+         '''______''' new line(\n) strings(paragraphs)
+        
+	int + str ---->error
+	str(int)---->int converted to str
+	int("123")--->str 123 converted to int
+	strings are immutable data structure.
+	dir(str)-lists methods that can be called on a
+        help(str.method)
+        len('str')
+
+-List - indexing/negative indexing
+	index out of range(exception)
+        python lists are heterogenous (general purpose containers) 
+	mutable
+	slicing
+	range().....(diff in python2 n python3)
+	list1 + list2 (new list)
+	list.insert(index,element)
+	del(index)
+	nested lists
+ 
+
+a=b  a is not assigned to b, but a and b refers to the samememory address.
+  
+a = [1,2,3,4]
+a = b	
+	
+			2000
+			--------
+			1 2 3 4
+			--------
+        3000(a)
+        ------
+        2000
+        ------
+			5000(b)
+			--------
+			2000
+			--------
