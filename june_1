@@ -1,0 +1,44 @@
+
+Programming languages that have all data structures as immutable are known as pure functional languages- eg: haskell
+
+Python is not a pure functional language. It has both mutable and immutable data structures. 
+---------------------------------------------------------------------
+SET :
+- set does not contain duplicates
+- membership test - in    
+- sets are un-ordered and mutable data structure
+- operatins such as union(|), intersection(&),difference(-),symmetric difference(^) etc are possible in sets
+- set comprehensions are possible
+----------------------------------------------------------------------
+
+Tuple:
+- similar to list
+- tuple is immutable
+
+*** a=()---->tuple
+    b=(1)--->int          
+    c=(1,)--->1 elt tuple
+
+- tuple un-packing   (we dont want to use indexing to extract elts by using un-packing) ***
+
+------------------------------------------------------------------------
+
+some more string operations:
+ 1.spit()
+ 2.join()
+ 3.strip()
+ 4.%
+ 5.escape seq.. (\)
+ 6.raw string
+
+---------------------------------------------------------
+
+
+'in' is a universal membership operator it return True when the element is present else False
+
+
+
+
+
+
+
