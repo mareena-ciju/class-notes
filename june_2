@@ -1,0 +1,19 @@
+
+
+-why do we prefer set to list in membership test?
+ A: better performance; O(1) look-up
+ reason: Set is implemented internally as hash table 
+
+
+
+why lists are not implemented as hash table?
+Ans:
+
+
+
+set membership test takes time O(1)
+dictionary lookup takes time O(1)
+list/tuple  membership test takes time O(N)
+
+
+performance depends on :time & memory
