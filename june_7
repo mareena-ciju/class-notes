@@ -1,0 +1,29 @@
+
+
+MEMORY MANAGEMENT IN A C PROGRAM :
+
+-Manual memory management ( explicitly allocate and deallocate memory )
+-When a program starts running, It starts with afixed amount of memory allocated to it by the OS.
+ Once program starts running, it might need extra memory and uses malloc for the purpose
+-memory allocated by malloc is deallocated by free()
+-Once a memory is deallocated using free, it should not be further used in the program.
+-3 category of data : Local
+		      Global
+                      malloc
+
+-space for local variables are allocated when a function is called.
+ gets deallocated when function ends
+-space for global variables are allocated when the pgm starts running
+ gets deallocated when pgm ends
+-malloc- allocated when we call malloc()
+ deallocates when we call free()
+
+realloc- used to change size of allocated block of memory
+
+possible bugs in manual memory management:
+-allocate and forget to deallocate
+-free more than once
+-use after free
+-Even if allocated memory has deilta changes made, free can cause pblm.
+
+                         
