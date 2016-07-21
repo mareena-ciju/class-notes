@@ -1,0 +1,6 @@
+in python,functions can have default formal paramaeters
+functions with star along with the parameter name-variable arg functions(var-args functions)
+Python supports named arguments
+** in function parameter collects the actual parameters and values into a dictionary
+Using * with a list variable as a fuunction parameter umpacks the list(provided list have the same number of arguments)
+Shadowing of local variables over global 
