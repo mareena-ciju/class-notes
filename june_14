@@ -1,0 +1,126 @@
+Let a=b=[1,2,3]
+a is b--checks whether a and b pointing to same object in memory(object identity)
+a==b--checks whether they have same content(value identity)
+id(a) returns a unique value.if id(a)=id(b)--->points to same objecti
+b=a[:] is a shallow copy
+	-copies whatever in a to b
+deep copy-creates copies for even reference
+pylint-a QA tool,detects some problems,checks code for style issues
+	Lint-analsye C code and spot issues
+if we do from math import *,the local functions may override them.So use import math
+#!/usr/bin/python-(contains m/c code of python) if added to the first line of pgm,it can be run using ./(for any programming language)
+sys.argv-contains commandline arguments
+______________________________________________________________________________________________________________________________________
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+value v/s object identity
+-------------------------
+a=[1,2,3] ,  b=[1,2,3]
+
+print a==b  -> value identity------------>true   (value identity)
+print a is b..............................>false (object identity)
+
+a and b are pointing to two distinct lists but here it happens to have the same content.
+
+' == ' is weaker form of comparison. only data comparison
+'is'  checks whether a abd b points to same object in memory. (in programming, we mostly dont have to use is)
+
+
+a=[1,2,3]       ,       b=[1,2,3]
+
+ id(a)                  id(b)
+
+140574163891840         140574163893136
+
+if id(a) not equal to id(b), that means a and b are not pointing to same object in memory. 'id' is a built in functionwhich gives a unique val.
+
+
+
+
+
+a=[1,2,3]       ,        b=[:]  (creating copy of a)
+
+id(a)                   id(b)
+
+140574163970816         140574163891840 -> diffrent in id's
+
+
+
+
+
+
+a=[1,[2,3,4]]
+
+b=a[:] -> shallow copy of list
+
+                        2000                   
+                       ------                  
+                        2 3 4                   
+                        ------                          
+a
+-----                   4000
+4000                    ------
+-----                   1 2000                          
+                        ------
+
+b
+-----
+5000                    5000                            
+-----                   ------                          
+                        1 2000                          
+                        ------                          
+
+here, a and b are 2 distinct lists (b being shallow copy of a, has same content as that of a).
+if we change b[0], change will be made only in list b. If we try to change b[1][0], we are actually changing list at address 2000, which is referenced by both a and b. thus change will be reflected in both the lists a and b.
+
+shallow copy vs deep copy
+shallow----> all elements in a is copied to b.
+deep-------> similar to shallow copy, but additionally copy of all  references are made
+             in deep copy, changes made will not affect a.(given example)
+
+
+
+import math -> mathematical operations such as math.sin(0),math.cos(1)..etc.
+
+math:module or library
+import copy
+
+a=[1,[2,3,4]]
+
+b=copy.deepcopy(a)
+
+b -> [1,[2,3,4]]
+
+b[1][0]=20
+
+b->[1,[20,3,4]]
+
+a->[1,[2,3,4]]
+
+
+
+
+Pylint -> Quality Assurance tool,it helps you track down a few of the problems in python code.also checking
+python code for style issues.
+
+lint -> analyse  c code and spot issues.
+
+from math import *
+print sin(0)  -> it works
+
+import * is not a good idea, name clash occures.
+
+import math
+print dir(math) -> all fucntions in math
+
+a) #!/usr/bin/python -> absolute path name, top most in program
+
+b) execute permission
+
+then we can run python program like this : ./file.py
+
+import sys
+sys.argv -> command line arguements

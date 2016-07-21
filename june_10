@@ -1,0 +1,110 @@
+*df-shows information regarding disk
+ free-shows information about memory
+*swapon-to enable swap
+*link of a file-crreates a new directory entry,no data is copied.Inode numbers are same for both files
+*link count-count of how many references are pointing to that disk block
+*copying a file-new disk blocks are allocated
+ln -s a b-symbolic link
+	 
+*inode-disk data structure holding info about file except name like size,dat e/time,ownership,permissions
+*directory-disk data structure contains list of filenames and inode numbers
+ disk contains inode table-array of inodes
+ inode number-index to the inode table to identify an inode
+*When a file is accessed,it looksup in the directory for the filename inode  pair and indexed the inode table and identifies a unique inode
+ inode holds the address of the data blocks of the file
+ os accesses the blocks and read/write data
+*sed-stream editor
+*awk-text processing tools
+*Variants o f grep:egrep,fgrep
+*Daemon-backgrouund process
+*Checksum-to verify the integrity of files
+*dd-device to device copy command
+
+---------------------------------------------------------------------------------------------------------------------
+=====================================================================================================================
+---------------------------------------------------------------------------------------------------------------------
+
+
+part1 - test discussion
+-----
+-to remote login : ssh guest@ipaddress
+
+-to find a file : find / -name filename (attributes like name,date,time ,size, etc can be used individually or combined with find) 
+
+-to find name of the processor which is running on the system and to find how many cores does it have use
+
+this commands less /proc/cpuinfo or lscpu.
+
+-to know kernel version running on this system use uname -a command.
+
+-to know % of disk space used by the root file system , to know name of the device mounted on / and to know
+
+how much swap memory is there on this system use df command.
+
+-to know total amount of RAM available on this system use free or htop commands.
+
+-to find inode number of the file use ls -i command.
+
+disk data layout  (****important*****)
+----------------
+inode is a 'disk data structure', which holds all information regarding a file except it's name. size of the
+
+file, date/time, ownership, permissions..
+
+a Directory
+-----------
+a disk data structure.which contains a list of files and inode numbers.
+
+disk: inode table :array of inodes/ sequence of inodes
+
+an inode number is simply an index into this array. it helps you to identify one particular inode.
+
+if we try to access a file (cat a.c)
+a)OS first converts (name)a.c ----> (inode number)12678
+
+b)indexes the inode table with this number and idntifies a unique "inode".
+
+c)inode holds:date, time, permissions etc and additionally holds the address of data blocks of the file.(files are split into blocks which may not be continuous)
+
+d)os can access the blocks and read/write data.
+
+
+link
+----
+
+when we copy a file using cp command inode changes, because it create new file.
+
+but using ln(link) command inode does'nt changes, it only create a refernce.
+
+when you create ln you are simply creating a new directory entry. 
+
+no data is copied. no change when moving/rename inode.
+
+ln command can be used in two differnt ways: 
+    a) ln a b
+    b) ln -s a b (symbolic link)
+
+------------------------
+
+size of file- ls -l
+
+varients of grep :egrep, fgrep, (extended grep,fast grep)
+
+daemon -> program running in background. cron- sheduling program.
+
+pid -> process id
+
+pid 1 -> init
+
+ubuntu version running in the machine: lsb_release -a
+network interface :ifconfig (only active interfaces are shown), if config -a --->all interfaces
+
+checksum: varify integrity of files
+md5 checksum- md5sum a.txt
+
+
+dd- device to device copy (parts of a file can be easly copied using this command)
+dd if=....  of=..... bs= count= 
+   i/p file o/p file block size
+
+/dev/zero= file with endless zero's

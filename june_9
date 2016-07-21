@@ -1,0 +1,21 @@
+
+
+The biggest convienience offered by very high level languages is automatic memory management.
+allocation is performed automatically whenever required.
+
+Python is doing automatic memory management using reference counting.
+
+a=[1.2,3]
+		2000
+		----------
+		1 2 3  |1
+		----------
+Reference count stored in memory..stores how many times memory is accessed
+Whenever reference is assignted to new value,the previous ref-count is decremented.Python checks whether it is 0.If yes,then it becomes garbage and is immediately freed.So it has a performance overhead
+Cyclical data  structure/self referential data structure
+ eg:a.append(a)
+When a is re-assigned, ref count will not become 0.it becomes garbage
+Limitation of ref counting-Cant handle cyclical data structures
+There are more elaborate garbage collection mechanisms.
+GC pause-garbage collection pause(pause to running program for garbage checking).Unpredictable of the time it happens. 
+
