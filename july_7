@@ -1,0 +1,62 @@
+TCP/IP Networking
+----------------
+
+TCP/IP (Transmission Control Protocol/Internet Protocol) is a communications protocol in a private network.
+
+traceroute : It is a command which can show you the path a packet of information takes from your computer to one you specify. It will list 
+all the routers it passes through until it reaches its destination, or fails to and is discarded. In addition to this, it will tell you how 
+long each 'hop' from router to router takes.
+
+We can actually see the TCP code  in kernel, it is the part of os kernel.
+
+kernel.org - we can download various versions. "Linux kernel cross refernce" we can see codes by web pages in c code.
+
+
+
+client/server
+
+
+client pgm;
+
+from socket import *  
+
+                                                 library socket: contains high level functions needed for n/w communication
+                                                 API-application pgm interface
+                                                 berkely socket API
+                                                 for our application pgm to interact with the OS kernal networking code 
+fd = socket(AF_INET, SOCK_DGRAM)  
+                              
+                                                  here socket() is fn available in socket module
+                                                  AF_INET and SOCK_DGRAM are two constants defined in socket module
+                                                      |          |
+                                                      |       tells to use UDP for communiction
+                                                      |               if we need tcp to be used we replace sock_dgram by sock_stream
+
+                                             address family --internet protocol ...tells OS kernal that we want to communicate using tcp/ip
+                                                  
+                                             fd is a kind of object, similar to file descriptor         
+fd.sendto('hello',('127.0.0.1', 8000))
+             |        |           |
+        (message)  (to address)(port number)   
+
+
+
+
+server program:
+from socket import *
+fd = socket(AF_INET,SOCK_DGRAM)
+fd.bind(('127.0.0.1',8000) ----------->tells OS kernal to assign port no 8000 to this program
+fd.recvfrom(100)........>function used to receive data. 100 indicates that data is received in blocks of size 100.
+                         now pgm is in block/sleeping state and does not consuming any cpu cycles and wakes up when data comes.
+
+
+
+
+
+
+
+
+
+
+
+
