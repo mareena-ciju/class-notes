@@ -1,0 +1,8 @@
+*global keyword in a fuction introduces a pointer to the global variable.Then the same variable cant be ceated locally.
+Having global variables in a program is not good thing.It creates many dependencies
+Functions are first class entities-can be treated like an object
+*A function can be embedded in a list
+*when a function is defined,in the address stored in the function name, is the bytecode of the function body.
+
+*function can be passed as a parameter to a function-Higher order functions
+
