@@ -1,0 +1,10 @@
+map=first argument applied to all elements of the 2nd argument
+anonymous functions-using lambda
+Assign it to a variable,and you can call it
+eg:lambda x,y:x+y
+higher order functions-map,filter,reduce
+filter-1st function should return a boolean value
+reduce-first function returns a value computed using all the arguments.
+reduces the list to a single value
+(implement reduce)
+Google search-map reduce algorithm
