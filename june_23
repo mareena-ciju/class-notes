@@ -1,0 +1,5 @@
+closures-fuctions which have captured some values from its environment
+curried function
+eg:differential,integration
+closure fn returned by differential is a closure
+These are properties of functional programming
