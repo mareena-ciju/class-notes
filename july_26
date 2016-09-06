@@ -1,0 +1,187 @@
+Classes/Objects
+---------------
+a) Inheritance -> is A relationships
+b) Composition -> has A relationships
+
+Inheritance
+----------
+ 1.py 
+class Foo:
+    def __init__(self):
+        print 'Foo: __init__'
+
+class Bar(Foo):
+    pass
+
+b = Bar()
+
+o/p:
+1.py 
+Foo: __init__
+
+2.py 
+class Foo:
+    def __init__(self):
+        print 'Foo: __init__'
+
+class Bar(Foo):
+    def __init__(self):
+        print 'Bar: __init__'
+
+b = Bar()
+
+o/p:
+Bar: __init__
+
+3.py 
+class Foo:
+    def __init__(self):
+        print 'Foo: __init__'
+
+class Bar(Foo):
+    def __init__(self):
+        print 'Bar: __init__'
+        Foo.__init__(self)
+
+b = Bar()
+
+o/p:
+Bar: __init__
+Foo: __init__
+
+ 4.py 
+
+class A:
+    def fun1(self):
+        print 'A: fun1'
+
+class B:
+    def fun2(self):
+        print 'B: fun2'
+
+class C(A, B):
+    def fun3(self):
+        print 'C: fun3'
+
+
+t = C()
+t.fun3()
+t.fun2()
+t.fun1()
+
+o/p:
+C: fun3
+B: fun2
+A: fun1
+
+"Extended attribute lookup mechanism"
+code reuse,MRP ->Method resolution order.
+
+class foo(object):
+  pass
+  
+new style classes -> it has new features.
+
+duck-typing
+-----------
+Python is a ducktyped language anything which behaves like a duck is a duck.
+
+1.py 
+
+class Duck:
+    def quack(self):
+        print 'Duck: quack quack'
+
+
+def handle_duck(d):
+    d.quack()
+
+
+d = Duck()
+handle_duck(d)
+
+o/p:Duck: quack quack
+
+2.py 
+
+class Duck:
+    def quack(self):
+        print 'Duck: quack quack'
+
+class LooksLikeADuck:
+    def quack(self):
+        print 'LooksLikeADuck: quack quack'
+
+    def run(self):
+        print 'LooksLikeADuck: run'
+
+
+def handle_duck(d):
+    d.quack()
+
+
+d = LooksLikeADuck()
+handle_duck(d)
+
+o/p:
+LooksLikeADuck: quack quack
+
+exceptions
+-----------
+1.py 
+class MyError(Exception):
+    def __init__(self, value):
+        self.value = value
+    
+def main():
+    try:
+        raise MyError(10)
+    except MyError as e:
+        print 'MyError: value = ', e.value
+
+main()
+
+o/p:
+MyError: value =  10
+
+2.py 
+def divide(x, y):
+    try:
+        result = x / y
+    except ZeroDivisionError:
+        print 'division by zero!'
+    else:
+        print 'result is: ', result
+    finally:
+        print "executing finally clause"
+
+
+divide(6, 2)
+
+o/p:
+result is:  3
+executing finally clause
+
+Applicatios-Sqlite3
+
+1.py 
+import sqlite3
+conn = sqlite3.connect('example.db')
+
+c = conn.cursor()
+
+c.execute('CREATE TABLE students (name text, mark real)')
+
+c.execute("INSERT INTO students VALUES ('Asok',80.50)")
+c.execute("INSERT INTO students VALUES ('John',78.20)")
+c.execute("INSERT INTO students VALUES ('Rahul',67.10)")
+
+conn.commit()
+
+conn.close()
+
+sqlite3 python docs
+--------------------
+
+http://docs.python.org/2/library/sqlite3.html
+
